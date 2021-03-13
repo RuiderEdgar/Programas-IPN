@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 
+//comentario//
 
 using namespace std;
 
@@ -8,6 +9,7 @@ using namespace std;
 class Diaanio{
     public:
         void visualizar();
+        int anio;
         int mes;
         int dia;
 };
@@ -28,21 +30,25 @@ void Diaanio::visualizar(){
     if(mes == 11) strcpy(nommes, "Noviembre");
     if(mes == 12) strcpy(nommes, "Diciembre");
     if(mes == 00 && mes > 12) strcpy(nommes, "Mes no valido");
-    cout<< dia <<":"<<nommes<<"\n";
+    cout<< dia <<"/"<<nommes<<"/"<<anio<<endl;
 }
 
 int main(){
     
 
     Diaanio hoy, cumpleanios;
-    cout<<"\tIntrodusca la fecha del dia de hoy \n\n";
-    cout<<"Introdusca el numero del mes: ";
+    cout<<"\t\tIntrodusca la fecha del dia de hoy \n\n";
+    cout<<"Introdusca el anio: ";
+    cin>>hoy.anio;
+    cout<<"\nIntrodusca el numero del mes: ";
     cin>>hoy.mes;
     cout<<"\nIntrodusca el numero del dia: ";
     cin>>hoy.dia;
-    cout<<"\n";
-    cout<<"\tIntrodusca su fecha de nacimiento \n\n";
-    cout<<"Introdusca el numero del mes: ";
+    cout<<"\n"<<endl;
+    cout<<"\t\tIntrodusca su fecha de nacimiento \n\n";
+    cout<<"Introdusca el anio: ";
+    cin>>cumpleanios.anio;
+    cout<<"\nIntrodusca el numero del mes: ";
     cin>>cumpleanios.mes;
     cout<<"\nIntrodusca el numero del dia: ";
     cin>>cumpleanios.dia;
