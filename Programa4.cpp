@@ -1,30 +1,30 @@
 #include <iostream>
 using namespace std;
 								// crea la clase cola 
-class line
+class cola
 {
 	int c[100];
 	int posf,posp; 
 	public:
-		line(int id);         	//constructor
-		~line(void);        	//destructor
+		cola(int id);         	//constructor
+		~cola(void);        	//destructor
 		void ponc(int i);
 		int quitac(void);
 		int quien;         		//contiene el numero de de identificacion de la cola
 };
 
-line::line(int id)				//esta es la funcion de construccion
+cola::cola(int id)				//esta es la funcion de construccion
 {
 	posp = posf = 0;
 	quien = id;
 	cout <<"La cola ha sido inicializada : "<< quien<<"\n";
 }; 
 
-line::~line(void)
+cola::~cola(void)
 {
 	cout << "La cola ha sido destruida : "<< quien << "\n";
 };  
- void line::ponc(int i)
+ void cola::ponc(int i)
  {
  	if (posf==100)
  	{
@@ -39,7 +39,7 @@ line::~line(void)
     }
  }
  
- int line::quitac(void)
+ int cola::quitac(void)
  {  
  	if (posp==posf)
 	 {
@@ -52,7 +52,7 @@ line::~line(void)
   } 
   main()
   {
-  	line a(1), b(2); 	//se crean dos objetos del tipo cola 
+  	cola a(1), b(2); 	//se crean dos objetos del tipo cola 
   	cout<<"\n";
   	a.ponc(10);
   	b.ponc(19);
